@@ -1,0 +1,12 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+
+# Ignore Jupyter checkpoints (if any)
+.ipynb_checkpoints/
+
+# Ignore VSCode config (optional)
+.vscode/
