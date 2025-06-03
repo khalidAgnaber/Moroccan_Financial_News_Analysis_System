@@ -1,0 +1,4 @@
+requests
+beautifulsoup4
+lxml
+sqlite3 ; python_version < '3.0'
