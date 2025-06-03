@@ -18,16 +18,14 @@ SOURCES = [
 ]
 
 def fetch_full_article(url, selector):
-    """
-    Fetches the full article text from the news link using the given CSS selector.
-    Joins all strings found in the selector, so bold or inline tags do not cause line breaks.
-    """
+
+    # Fetches the full article text from the news link using the given CSS selector.
+ 
     try:
         resp = requests.get(url, timeout=15)
         soup = BeautifulSoup(resp.content, "html.parser")
         article_div = soup.select_one(selector)
         if not article_div:
-            # Try fallback: get all <p> tags as a last resort
             paragraphs = soup.find_all('p')
             if paragraphs:
                 return " ".join(p.get_text(strip=True) for p in paragraphs)
@@ -51,8 +49,8 @@ def parse_rss_item(item, source_name, article_selector):
     pub_date = item.pubDate.text.strip() if item.pubDate else ""
     # Fetch full description by webscraping
     description = fetch_full_article(link, article_selector) if link else ""
-    # Respectful pause to avoid hammering the site
-    time.sleep(1)  # 1 second pause between requests
+    # 1 second pause between requests to avoid hammering the site
+    time.sleep(1)
     return {
         "source": source_name,
         "title": title,
@@ -62,9 +60,9 @@ def parse_rss_item(item, source_name, article_selector):
     }
 
 def fetch_rss_articles(source):
-    """
-    Fetches articles from the RSS feed of a given source.
-    """
+
+    # Fetches articles from the RSS feed of a given source.
+
     print(f"[INFO] Fetching RSS from {source['name']}...")
     resp = requests.get(source['rss'], timeout=15)
     soup = BeautifulSoup(resp.content, features='xml')
@@ -75,10 +73,8 @@ def fetch_rss_articles(source):
     return articles
 
 def save_to_db(articles, db_name="morocco_financial_news.db"):
-    """
-    Saves new articles to the database, logs what is added,
-    and notifies if nothing was added.
-    """
+
+    # Saves new articles to the database, logs what is added.
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS news (
@@ -105,7 +101,6 @@ def save_to_db(articles, db_name="morocco_financial_news.db"):
                 )
             )
             if c.rowcount > 0:
-                # Something was added
                 print(f"[ADDED] {art['source']} | {art['title'][:60]}... | {art['link']}")
                 added_count += 1
         except Exception as e:
@@ -118,9 +113,6 @@ def save_to_db(articles, db_name="morocco_financial_news.db"):
         print(f"[INFO] {added_count} new article(s) added to the database.")
 
 def main():
-    """
-    Main execution function.
-    """
     all_articles = []
     for source in SOURCES:
         try:
