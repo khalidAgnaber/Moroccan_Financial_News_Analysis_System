@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 # Ignore virtual environments
-venv/
+t4_venv/
 
 # Ignore Jupyter checkpoints (if any)
 .ipynb_checkpoints/

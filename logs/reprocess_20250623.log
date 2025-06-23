@@ -1,0 +1,37 @@
+2025-06-23 11:02:55 - reprocess - INFO - Loading existing data from /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv
+2025-06-23 11:02:55 - reprocess - INFO - Backup created at /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv.backup
+2025-06-23 11:02:55 - reprocess - INFO - Reprocessing company detection for all articles...
+2025-06-23 11:02:56 - reprocess - INFO - Processed 50/204 articles
+2025-06-23 11:02:56 - reprocess - INFO - Processed 100/204 articles
+2025-06-23 11:02:56 - reprocess - INFO - Processed 150/204 articles
+2025-06-23 11:02:56 - reprocess - INFO - Processed 200/204 articles
+2025-06-23 11:02:56 - reprocess - INFO - Processed 204/204 articles
+2025-06-23 11:02:56 - reprocess - INFO - Successfully updated company detection for 204 articles
+2025-06-23 11:14:06 - reprocess - INFO - Loading existing data from /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv
+2025-06-23 11:14:06 - reprocess - INFO - Backup created at /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv.backup
+2025-06-23 11:14:06 - reprocess - INFO - Reprocessing company detection for all articles...
+2025-06-23 11:14:06 - reprocess - INFO - Processed 50/204 articles
+2025-06-23 11:14:07 - reprocess - INFO - Processed 100/204 articles
+2025-06-23 11:14:07 - reprocess - INFO - Processed 150/204 articles
+2025-06-23 11:14:07 - reprocess - INFO - Processed 200/204 articles
+2025-06-23 11:14:07 - reprocess - INFO - Processed 204/204 articles
+2025-06-23 11:14:07 - reprocess - INFO - Successfully updated company detection for 204 articles
+2025-06-23 11:14:07 - reprocess - INFO - Debug information written to /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv.debug.txt
+2025-06-23 11:16:38 - reprocess - INFO - Loading existing data from /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv
+2025-06-23 11:16:38 - reprocess - INFO - Backup created at /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv.backup_fixed
+2025-06-23 11:16:38 - reprocess - INFO - Reprocessing company detection for all articles...
+2025-06-23 11:16:38 - reprocess - INFO - Processed 50/204 articles
+2025-06-23 11:16:39 - reprocess - INFO - Processed 100/204 articles
+2025-06-23 11:16:39 - reprocess - INFO - Processed 150/204 articles
+2025-06-23 11:16:39 - reprocess - INFO - Processed 200/204 articles
+2025-06-23 11:16:39 - reprocess - INFO - Processed 204/204 articles
+2025-06-23 11:16:39 - reprocess - INFO - Successfully updated company detection for 204 articles
+2025-06-23 11:17:50 - reprocess - INFO - Loading existing data from /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv
+2025-06-23 11:17:50 - reprocess - INFO - Backup created at /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv.backup_fixed
+2025-06-23 11:17:50 - reprocess - INFO - Reprocessing company detection for all articles...
+2025-06-23 11:17:50 - reprocess - INFO - Processed 50/204 articles
+2025-06-23 11:17:51 - reprocess - INFO - Processed 100/204 articles
+2025-06-23 11:17:51 - reprocess - INFO - Processed 150/204 articles
+2025-06-23 11:17:51 - reprocess - INFO - Processed 200/204 articles
+2025-06-23 11:17:51 - reprocess - INFO - Processed 204/204 articles
+2025-06-23 11:17:52 - reprocess - INFO - Successfully updated company detection for 204 articles

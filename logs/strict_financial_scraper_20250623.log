@@ -1,0 +1,73 @@
+2025-06-23 12:04:55 - strict_financial_scraper - INFO - Collecting financial news from Boursenews...
+2025-06-23 12:04:56 - strict_financial_scraper - INFO - Found 15 potential financial articles from Boursenews
+2025-06-23 12:04:58 - strict_financial_scraper - WARNING - Skipping https://boursenews.ma/articles/marches/2 - Not a valid article
+2025-06-23 12:05:03 - strict_financial_scraper - WARNING - Skipping https://boursenews.ma/article/marches/portefeuille-boursenews-investisseur - Not a valid article
+2025-06-23 12:05:14 - strict_financial_scraper - WARNING - Skipping https://boursenews.ma/article/marches/programme-AGO-boursenews-semaine-du-23-juin-au-28-juin-2025 - Not a valid article
+2025-06-23 12:05:39 - strict_financial_scraper - WARNING - Skipping https://boursenews.ma/articles/marches/3 - Not a valid article
+2025-06-23 12:05:49 - strict_financial_scraper - WARNING - Skipping https://boursenews.ma/articles/marches/4 - Not a valid article
+2025-06-23 12:05:52 - strict_financial_scraper - INFO - Successfully parsed 10 valid financial articles from Boursenews (rejected 5)
+2025-06-23 12:05:52 - strict_financial_scraper - INFO - Collecting financial news from FLM...
+2025-06-23 12:05:53 - strict_financial_scraper - INFO - Found 15 potential financial articles from FLM
+2025-06-23 12:05:57 - strict_financial_scraper - WARNING - Skipping https://flm.ma/video.php?id=724 - Not a valid article
+2025-06-23 12:06:00 - strict_financial_scraper - WARNING - Skipping https://flm.ma/article.php?id=9950 - Not a financial article
+2025-06-23 12:06:03 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54797 - Not a financial article
+2025-06-23 12:06:06 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54768 - Not a financial article
+2025-06-23 12:06:09 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54770 - Not a financial article
+2025-06-23 12:06:22 - strict_financial_scraper - WARNING - Skipping https://flm.ma/article.php?id=12487 - Not a financial article
+2025-06-23 12:06:24 - strict_financial_scraper - WARNING - Skipping https://flm.ma/article.php?id=12469 - Not a valid article
+2025-06-23 12:06:28 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54775 - Not a financial article
+2025-06-23 12:06:31 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54790 - Not a financial article
+2025-06-23 12:06:32 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54750 - Not a valid article
+2025-06-23 12:06:36 - strict_financial_scraper - WARNING - Skipping https://flm.ma/news.php?id=54777 - Not a financial article
+2025-06-23 12:06:36 - strict_financial_scraper - INFO - Successfully parsed 4 valid financial articles from FLM (rejected 11)
+2025-06-23 12:06:36 - strict_financial_scraper - INFO - Collecting financial news from Le Desk...
+2025-06-23 12:06:36 - strict_financial_scraper - INFO - Found 1 potential financial articles from Le Desk
+2025-06-23 12:06:38 - strict_financial_scraper - INFO - Successfully parsed 1 valid financial articles from Le Desk (rejected 0)
+2025-06-23 12:06:38 - strict_financial_scraper - INFO - Collecting financial news from H24Info...
+2025-06-23 12:06:39 - strict_financial_scraper - INFO - Found 0 potential financial articles from H24Info
+2025-06-23 12:06:39 - strict_financial_scraper - INFO - Successfully parsed 0 valid financial articles from H24Info (rejected 0)
+2025-06-23 12:06:39 - strict_financial_scraper - INFO - Collecting financial news from Le Matin...
+2025-06-23 12:06:40 - strict_financial_scraper - INFO - Found 15 potential financial articles from Le Matin
+2025-06-23 12:06:58 - strict_financial_scraper - WARNING - Skipping https://lematin.ma/economie/le-maroc-bien-positionne-pour-capter-les-financements-de-la-bid/286723 - Not a valid article
+2025-06-23 12:07:04 - strict_financial_scraper - WARNING - Skipping https://lematin.ma/economie/taghazout-bay-se-developpe-et-devoile-sa-programmation-pour-lete-2025/286858 - Not a financial article
+2025-06-23 12:07:06 - strict_financial_scraper - WARNING - Skipping https://lematin.ma/economie/ryad-mezzour-financera-les-projets-des-chambres-dindustrie-et-de-commerce/286893 - Not a valid article
+2025-06-23 12:07:18 - strict_financial_scraper - WARNING - Skipping https://lematin.ma/economie/vicenne-vise-700-millions-de-dirhams-de-projets-apres-son-ipo-en-bourse/286506 - Not a valid article
+2025-06-23 12:07:22 - strict_financial_scraper - INFO - Successfully parsed 11 valid financial articles from Le Matin (rejected 4)
+2025-06-23 12:07:22 - strict_financial_scraper - INFO - Collecting financial news from Medias24...
+2025-06-23 12:07:22 - strict_financial_scraper - INFO - Found 15 potential financial articles from Medias24
+2025-06-23 12:07:26 - strict_financial_scraper - WARNING - Skipping https://medias24.com/2025/06/20/service-militaire-2025-le-23-juin-dernier-delai-pour-remplir-le-formulaire-de-recensement/ - Not a financial article
+2025-06-23 12:07:28 - strict_financial_scraper - WARNING - Skipping https://medias24.com/2025/06/20/novec-chargee-de-letude-de-la-future-autoroute-entre-laxe-casablanca-rabat-et-had-soualem-via-dar-bouazza/ - Not a financial article
+2025-06-23 12:07:30 - strict_financial_scraper - WARNING - Skipping https://medias24.com/2025/06/20/un-nouveau-parking-de-142-places-ouvre-ses-portes-a-rabat/ - Not a financial article
+2025-06-23 12:07:48 - strict_financial_scraper - WARNING - Skipping https://medias24.com/2025/06/19/des-deputes-du-parlement-centramericain-reaffirment-le-soutien-a-lintegrite-territoriale-du-maroc/ - Not a financial article
+2025-06-23 12:07:54 - strict_financial_scraper - WARNING - Skipping https://medias24.com/2025/06/20/le-compte-rendu-du-conseil-de-gouvernement-du-19-juin-2025/ - Not a financial article
+2025-06-23 12:07:58 - strict_financial_scraper - WARNING - Skipping https://medias24.com/2025/06/20/exercice-naval-conjoint-maroc-france-pour-renforcer-la-securite-maritime/ - Not a financial article
+2025-06-23 12:08:01 - strict_financial_scraper - INFO - Successfully parsed 9 valid financial articles from Medias24 (rejected 6)
+2025-06-23 12:08:01 - strict_financial_scraper - INFO - Collecting financial news from Finance News - Financial...
+2025-06-23 12:08:01 - strict_financial_scraper - INFO - Found 15 potential financial articles from Finance News - Financial
+2025-06-23 12:08:08 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/bourse-casablanca-2025 - Not a valid article
+2025-06-23 12:08:11 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-financiere-maroc - Not a valid article
+2025-06-23 12:08:14 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/mnes-cotees-bourse-casablanca - Not a valid article
+2025-06-23 12:08:27 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-financiere-maroc/4 - Not a valid article
+2025-06-23 12:08:30 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-financiere-maroc/5 - Not a valid article
+2025-06-23 12:08:33 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-financiere-maroc/464 - Not a valid article
+2025-06-23 12:08:37 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-financiere-maroc/2 - Not a valid article
+2025-06-23 12:08:41 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/zoom-vicenne-bourse-de-casablanca - Not a valid article
+2025-06-23 12:08:46 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-financiere-maroc/3 - Not a valid article
+2025-06-23 12:08:59 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/saham-bank-societe-generale - Not a valid article
+2025-06-23 12:09:04 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/chantier-protection-sociale-maroc-beneficiaires - Not a financial article
+2025-06-23 12:09:04 - strict_financial_scraper - INFO - Successfully parsed 4 valid financial articles from Finance News - Financial (rejected 11)
+2025-06-23 12:09:04 - strict_financial_scraper - INFO - Collecting financial news from Finance News - Economic...
+2025-06-23 12:09:05 - strict_financial_scraper - INFO - Found 15 potential financial articles from Finance News - Economic
+2025-06-23 12:09:10 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-economique/salon-auto-occasion-2025 - Not a financial article
+2025-06-23 12:09:20 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-economique/3 - Not a valid article
+2025-06-23 12:09:23 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-economique/akdital-rabat-etablissement-sante-maroc - Not a financial article
+2025-06-23 12:09:31 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-economique - Not a valid article
+2025-06-23 12:09:37 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-economique/1036 - Not a valid article
+2025-06-23 12:09:41 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-economique/4 - Not a valid article
+2025-06-23 12:09:44 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-economique/2 - Not a valid article
+2025-06-23 12:09:47 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/articles/actualite-economique/5 - Not a valid article
+2025-06-23 12:09:55 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-economique/bouees-sauvetage-teleguidees-maroc - Not a financial article
+2025-06-23 12:09:59 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-economique/global-peace-index-2025 - Not a financial article
+2025-06-23 12:10:02 - strict_financial_scraper - WARNING - Skipping https://fnh.ma/article/actualite-economique/cheptel-national-elevage - Not a financial article
+2025-06-23 12:10:02 - strict_financial_scraper - INFO - Successfully parsed 4 valid financial articles from Finance News - Economic (rejected 11)
+2025-06-23 12:10:02 - strict_financial_scraper - INFO - Created new file with 43 financial articles at /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv

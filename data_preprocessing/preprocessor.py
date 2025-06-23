@@ -1,298 +1,234 @@
 """
-Data preprocessing module for sentiment analysis of financial news.
+Preprocessing module for Moroccan financial news data.
+Handles company detection and text preprocessing.
 """
-
-import re
-import string
-import numpy as np
 import pandas as pd
-import json
+import re
+import unicodedata
+import sys
 import os
 from pathlib import Path
-from datetime import datetime
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from sklearn.preprocessing import LabelEncoder
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+import datetime
 
-from config import PROCESSED_DATA_DIR
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config import COMPANIES, PROCESSED_DATA_DIR, RAW_DATA_DIR
 from utils.logger import setup_logger
+from data_collection.data_storage import load_raw_news_data, save_processed_data
 
-# Set up logger
-logger = setup_logger("preprocessor")
+logger = setup_logger("preprocess")
 
-# Download NLTK resources if needed
-try:
-    nltk.data.find('tokenizers/punkt')
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('punkt', quiet=True)
-    nltk.download('stopwords', quiet=True)
+# French stop words to remove before matching
+FRENCH_STOP_WORDS = {
+    'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'ce', 'cette', 'ces',
+    'mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'son', 'sa', 'ses', 'notre', 'nos',
+    'votre', 'vos', 'leur', 'leurs', 'à', 'au', 'aux', 'avec', 'ce', 'ces',
+    'dans', 'de', 'des', 'du', 'en', 'entre', 'et', 'est', 'il', 'ils', 'je',
+    'j\'', 'l\'', 'd\'', 'la', 'le', 'leur', 'lui', 'ma', 'mais', 'me', 'même',
+    'mes', 'moi', 'mon', 'ni', 'notre', 'nous', 'ou', 'où', 'par', 'pas', 'pour',
+    'qu\'', 'que', 'qui', 'sa', 'se', 'si', 'son', 'sur', 'ta', 'te', 'tes', 'toi',
+    'ton', 'tu', 'un', 'une', 'votre', 'vous', 'c\'', 's\'', 'n\'', 'été', 'etait',
+    'étaient', 'étions', 'été', 'être', 'sont', 'suis', 'est'
+}
 
-class TextPreprocessor:
-    """Preprocess financial news data for sentiment analysis."""
+def normalize_text(text):
+    """Normalize text by removing accents"""
+    if not text:
+        return ""
     
-    def __init__(self, max_features=10000, max_len=100):
-        """Initialize preprocessor with parameters."""
-        self.max_features = max_features
-        self.max_len = max_len
-        self.tokenizer = Tokenizer(num_words=max_features)
-        self.label_encoder = LabelEncoder()
-        
-        try:
-            self.french_stopwords = set(stopwords.words('french'))
-            logger.info("Loaded French stopwords")
-        except Exception as e:
-            logger.warning(f"Failed to load stopwords: {e}")
-            self.french_stopwords = set()
+    # Normalize unicode and remove accents
+    text = unicodedata.normalize('NFKD', text)
+    text = ''.join([c for c in text if not unicodedata.combining(c)])
+    return text.lower()
+
+def preprocess_text(text):
+    """
+    Preprocess text by:
+    1. Normalizing (removing accents, lowercasing)
+    2. Removing punctuation
+    3. Removing stop words
+    """
+    if not text:
+        return ""
     
-    def clean_text(self, text):
-        """Clean and normalize text."""
-        if not isinstance(text, str) or not text:
-            return ""
-        
-        # Convert to lowercase
-        text = text.lower()
-        
-        # Remove URLs
-        text = re.sub(r'https?://\S+|www\.\S+', '', text)
-        
-        # Remove HTML tags
-        text = re.sub(r'<.*?>', '', text)
-        
-        # Remove punctuation
-        text = text.translate(str.maketrans('', '', string.punctuation))
-        
-        # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text).strip()
-        
-        # Remove numbers
-        text = re.sub(r'\d+', '', text)
-        
-        # Remove stopwords
-        if self.french_stopwords:
-            try:
-                tokens = word_tokenize(text)
-                tokens = [word for word in tokens if word not in self.french_stopwords]
-                text = ' '.join(tokens)
-            except Exception as e:
-                logger.warning(f"Failed to remove stopwords: {e}")
-        
-        return text
+    # Normalize
+    text = normalize_text(text)
     
-    def analyze_sentiment(self, text):
-        """Analyze sentiment using keyword matching."""
-        if not isinstance(text, str) or len(text.strip()) < 10:
-            return 'neutral'  # Default for empty or very short text
-            
-        try:
-            # French financial sentiment keywords
-            negative_words = ['baisse', 'chute', 'perte', 'déficit', 'faillite', 'échec', 
-                             'déception', 'risque', 'crise', 'problème', 'difficulté',
-                             'recul', 'diminution', 'ralentissement', 'danger', 'inquiétude']
-            
-            positive_words = ['hausse', 'croissance', 'profit', 'bénéfice', 'succès', 'réussite', 
-                             'amélioration', 'opportunité', 'performance', 'innovation',
-                             'progression', 'augmentation', 'avantage', 'gain', 'optimisme']
-            
-            text_lower = text.lower()
-            neg_count = sum(1 for word in negative_words if word in text_lower)
-            pos_count = sum(1 for word in positive_words if word in text_lower)
-            
-            if neg_count > pos_count:
-                return 'negative'
-            elif pos_count > neg_count:
-                return 'positive'
-            else:
-                return 'neutral'
+    # Replace punctuation with spaces
+    text = re.sub(r'[^\w\s]', ' ', text)
+    
+    # Split into words
+    words = text.split()
+    
+    # Remove stop words
+    words = [word for word in words if word not in FRENCH_STOP_WORDS]
+    
+    # Rejoin into text
+    return " ".join(words)
+
+def detect_companies(title, text, debug=False):
+    """
+    Detect companies mentioned in an article's title and text
+    """
+    mentioned_companies = set()
+    company_details = {}  # For debugging
+    
+    # Combine title and text
+    title = title or ""
+    text = text or ""
+    combined_text = f"{title} {text}"
+    
+    # Preprocess text - this removes stop words!
+    preprocessed_text = preprocess_text(combined_text)
+    
+    for company in COMPANIES:
+        company_name = company["name"]
+        matching_keywords = []
+        
+        # First try to match ticker (exact match)
+        if "ticker" in company and company["ticker"]:
+            ticker = company["ticker"]
+            if re.search(r'\b' + re.escape(ticker.lower()) + r'\b', preprocessed_text):
+                mentioned_companies.add(company_name)
+                matching_keywords.append(f"ticker:{ticker}")
                 
-        except Exception as e:
-            logger.error(f"Error analyzing sentiment: {e}")
-            return 'neutral'  # Default if analysis fails
+        # Then try keywords
+        if not matching_keywords:  # Skip if ticker already matched
+            for keyword in company["keywords"]:
+                # Normalize and preprocess the keyword too
+                processed_keyword = normalize_text(keyword).lower()
+                
+                # Skip very short keywords unless they're ticker symbols
+                if len(processed_keyword) < 3 and processed_keyword != company.get("ticker", "").lower():
+                    continue
+                
+                # Look for the keyword as a whole word
+                if re.search(r'\b' + re.escape(processed_keyword) + r'\b', preprocessed_text):
+                    mentioned_companies.add(company_name)
+                    matching_keywords.append(keyword)
+                    break  # Found one keyword, no need to check others
+        
+        # Store details for debugging
+        if matching_keywords and debug:
+            company_details[company_name] = matching_keywords
     
-    def find_best_text_column(self, df):
-        """Find the best column to use as the main text content."""
-        text_columns = {}
-        
-        # Get all string columns and their average length
-        for col in df.columns:
-            if df[col].dtype == 'object':
-                avg_len = df[col].fillna('').astype(str).str.len().mean()
-                text_columns[col] = avg_len
-        
-        if not text_columns:
-            logger.warning("No text columns found in dataframe")
-            return None
-        
-        # Get the column with the longest average text
-        main_text_col = max(text_columns, key=text_columns.get)
-        logger.info(f"Using '{main_text_col}' as main text content (avg length: {text_columns[main_text_col]:.1f})")
-        
-        return main_text_col
+    # Return different formats based on debug flag
+    if debug:
+        return sorted(mentioned_companies), company_details
+    return sorted(mentioned_companies)
+
+def process_articles_for_companies(df, debug=False):
+    """
+    Process all articles to detect mentioned companies
     
-    def find_title_column(self, df):
-        """Find a column that likely contains the title."""
-        # Look for columns with title-like names
-        title_cols = [col for col in df.columns if 'title' in col.lower() or 'headline' in col.lower() or 'header' in col.lower()]
+    Args:
+        df (DataFrame): DataFrame containing news articles
+        debug (bool): Whether to return detailed match information
         
-        if title_cols:
-            logger.info(f"Using '{title_cols[0]}' as title column")
-            return title_cols[0]
-        
-        # If no obvious title column, look for the second longest text column
-        text_columns = {}
-        for col in df.columns:
-            if df[col].dtype == 'object':
-                avg_len = df[col].fillna('').astype(str).str.len().mean()
-                text_columns[col] = avg_len
-        
-        if len(text_columns) > 1:
-            # Sort by length and take the second longest
-            sorted_cols = sorted(text_columns.items(), key=lambda x: x[1], reverse=True)
-            second_col = sorted_cols[1][0]
-            logger.info(f"Using '{second_col}' as title column")
-            return second_col
-        
+    Returns:
+        DataFrame: The input DataFrame with an added 'companies' column
+    """
+    if df is None or df.empty:
+        logger.error("No data to process")
         return None
     
-    def preprocess(self, df):
-        """Preprocess dataframe with financial news."""
-        logger.info("Cleaning text data...")
-        
-        # Find best columns to use
-        main_text_col = self.find_best_text_column(df)
-        title_col = self.find_title_column(df)
-        
-        if not main_text_col:
-            # Create a dummy text column from all string columns
-            logger.warning("Creating composite text column from all available text")
-            df['content'] = df.select_dtypes(include=['object']).fillna('').apply(
-                lambda x: ' '.join(x.astype(str)), axis=1
-            )
-            main_text_col = 'content'
-        
-        # For compatibility, ensure we have content column
-        df['content'] = df[main_text_col]
-        
-        # Clean text
-        df['clean_content'] = df['content'].fillna('').apply(self.clean_text)
-        
-        if title_col:
-            # For compatibility, ensure we have title column
-            df['title'] = df[title_col]
-            df['clean_title'] = df['title'].fillna('').apply(self.clean_text)
-            df['clean_combined'] = df['clean_title'] + ' ' + df['clean_content']
-        else:
-            df['title'] = ''
-            df['clean_title'] = ''
-            df['clean_combined'] = df['clean_content']
-        
-        # Analyze sentiment
-        logger.info("Analyzing sentiment of articles...")
-        df['sentiment'] = df['clean_combined'].apply(self.analyze_sentiment)
-        sentiment_counts = df['sentiment'].value_counts().to_dict()
-        logger.info(f"Sentiment distribution: {sentiment_counts}")
-        
-        # Fit tokenizer
-        logger.info("Fitting tokenizer...")
-        self.tokenizer.fit_on_texts(df['clean_combined'])
-        logger.info(f"Vocabulary size: {len(self.tokenizer.word_index)}")
-        
-        # Encode text to sequences
-        sequences = self.tokenizer.texts_to_sequences(df['clean_combined'])
-        df['sequence'] = [json.dumps(seq) for seq in sequences]
-        
-        # Fit label encoder
-        logger.info("Fitting label encoder...")
-        self.label_encoder.fit(df['sentiment'])
-        logger.info(f"Classes: {self.label_encoder.classes_}")
-        
-        # Encode labels
-        df['sentiment_encoded'] = self.label_encoder.transform(df['sentiment'])
-        
+    # Make sure required columns exist
+    required_cols = ['title', 'text']
+    if not all(col in df.columns for col in required_cols):
+        logger.error(f"Data missing required columns: {required_cols}")
         return df
     
-    def save_processed_data(self, df, output_dir=None):
-        """Save preprocessed data and artifacts."""
-        if output_dir is None:
-            output_dir = PROCESSED_DATA_DIR
+    # Create a copy to avoid modifying the original
+    df_copy = df.copy()
+    
+    # Initialize debug info if needed
+    debug_info = []
+    
+    # Process each article
+    logger.info(f"Processing {len(df_copy)} articles for company detection...")
+    
+    company_lists = []
+    for i, row in df_copy.iterrows():
+        title = row['title'] if not pd.isna(row['title']) else ""
+        text = row['text'] if not pd.isna(row['text']) else ""
+        
+        if debug:
+            companies, details = detect_companies(title, text, debug=True)
+            company_lists.append(companies)
             
-        # Create directory if it doesn't exist
-        os.makedirs(output_dir, exist_ok=True)
+            if companies:
+                debug_info.append({
+                    'title': title[:50] + "..." if len(title) > 50 else title,
+                    'url': row['url'] if 'url' in row else "N/A", 
+                    'detected': companies,
+                    'details': details
+                })
+        else:
+            companies = detect_companies(title, text)
+            company_lists.append(companies)
         
-        # Generate timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        # Save preprocessed data
-        output_file = os.path.join(output_dir, f"preprocessed_data_{timestamp}.csv")
-        df.to_csv(output_file, index=False)
-        logger.info(f"Preprocessed data saved to {output_file}")
-        
-        # Save tokenizer
-        tokenizer_file = os.path.join(output_dir, f"tokenizer_{timestamp}.json")
-        tokenizer_json = {
-            'word_index': self.tokenizer.word_index,
-            'num_words': self.max_features
-        }
-        with open(tokenizer_file, 'w') as f:
-            json.dump(tokenizer_json, f)
-        logger.info(f"Tokenizer saved to {tokenizer_file}")
-        
-        return output_file, tokenizer_file
+        if (i+1) % 100 == 0 or i+1 == len(df_copy):
+            logger.info(f"Processed {i+1}/{len(df_copy)} articles")
     
-    def prepare_data(self, df):
-        """Prepare inputs for model training."""
-        # Get sequences from dataframe
-        sequences = [json.loads(seq) for seq in df['sequence']]
+    # Add companies as a comma-separated string
+    df_copy['companies'] = [','.join(companies) for companies in company_lists]
+    
+    # Write debug information if requested
+    if debug and debug_info:
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        debug_file = PROCESSED_DATA_DIR / f"company_detection_debug_{timestamp}.txt"
         
-        # Pad sequences
-        padded_sequences = pad_sequences(sequences, maxlen=self.max_len)
+        # Ensure directory exists
+        os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
         
-        # Get labels
-        labels = df['sentiment_encoded'].values
+        with open(debug_file, 'w', encoding='utf-8') as f:
+            f.write("COMPANY DETECTION RESULTS\n")
+            f.write("========================\n\n")
+            
+            for item in debug_info:
+                f.write(f"ARTICLE: {item['title']}\n")
+                f.write(f"URL: {item['url']}\n")
+                f.write(f"DETECTED: {', '.join(item['detected'])}\n")
+                f.write("MATCHING DETAILS:\n")
+                
+                for company, keywords in item['details'].items():
+                    f.write(f"  - {company}: matched by [{', '.join(keywords)}]\n")
+                
+                f.write("\n" + "-"*50 + "\n\n")
         
-        # Split data
-        X_train_val, X_test, y_train_val, y_test = train_test_split(
-            padded_sequences, labels, test_size=0.2, random_state=42
-        )
-        
-        # Split training data into training and validation
-        X_train, X_val, y_train, y_val = train_test_split(
-            X_train_val, y_train_val, test_size=0.2, random_state=42
-        )
-        
-        logger.info(f"Training set size: {len(X_train)}")
-        logger.info(f"Validation set size: {len(X_val)}")
-        logger.info(f"Test set size: {len(X_test)}")
-        
-        return X_train, X_val, X_test, y_train, y_val, y_test
+        logger.info(f"Debug information written to {debug_file}")
+    
+    return df_copy
 
-def preprocess_for_training(raw_data):
-    """Preprocess data for model training."""
-    # Check if raw_data is already a DataFrame
-    if isinstance(raw_data, pd.DataFrame):
-        df = raw_data.copy()
-    # Check if it's a string path
-    elif isinstance(raw_data, (str, Path)) and os.path.exists(raw_data):
-        df = pd.read_csv(raw_data)
-    else:
-        # Try to convert to DataFrame as a last resort
-        try:
-            df = pd.DataFrame(raw_data)
-        except:
-            raise TypeError(f"Cannot process raw_data of type {type(raw_data)}. Expected DataFrame or file path.")
+def preprocess_all_news():
+    """
+    Main function to preprocess all news data:
+    1. Load raw news data
+    2. Process and detect companies
+    3. Save the processed data
+    """
+    # Load raw data
+    raw_df = load_raw_news_data()
     
-    # Initialize preprocessor
-    preprocessor = TextPreprocessor()
+    if raw_df is None:
+        logger.error("Failed to load raw news data")
+        return
     
-    # Preprocess data
-    df_processed = preprocessor.preprocess(df)
+    logger.info(f"Loaded {len(raw_df)} articles from raw data")
+    
+    # Process data to detect companies
+    processed_df = process_articles_for_companies(raw_df, debug=True)
+    
+    if processed_df is None:
+        logger.error("Failed to process articles")
+        return
     
     # Save processed data
-    preprocessor.save_processed_data(df_processed)
+    file_path = save_processed_data(processed_df, "news_with_companies.csv")
     
-    # Return the processed dataframe and preprocessor
-    return df_processed, preprocessor
+    if file_path:
+        logger.info(f"Successfully processed {len(processed_df)} articles and saved to {file_path}")
+    else:
+        logger.error("Failed to save processed data")
+
+if __name__ == "__main__":
+    preprocess_all_news()

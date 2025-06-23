@@ -1,0 +1,55 @@
+2025-06-23 11:32:43 - scraper - INFO - Collecting news from Boursenews...
+2025-06-23 11:32:44 - scraper - INFO - Found 20 potential articles from Boursenews
+2025-06-23 11:33:09 - scraper - INFO - Collecting news from Boursenews...
+2025-06-23 11:33:10 - scraper - INFO - Found 20 potential articles from Boursenews
+2025-06-23 11:33:18 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/4 - Not a valid article
+2025-06-23 11:33:30 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/bourses-europe-tensions-moyen-orient - Not a valid article
+2025-06-23 11:33:33 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/Le-faible-usage-angalais-bourse - Not a valid article
+2025-06-23 11:33:42 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/5 - Not a valid article
+2025-06-23 11:33:49 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/Protection-sociale-au-Maroc-nouveau-soutien-de-250-M%24-de-la-Banque-mondiale - Not a valid article
+2025-06-23 11:33:52 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/2 - Not a valid article
+2025-06-23 11:34:02 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/programme-AGO-boursenews-semaine-du-23-juin-au-28-juin-2025 - Not a valid article
+2025-06-23 11:34:13 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/portefeuille-boursenews-investisseur - Not a valid article
+2025-06-23 11:34:21 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/feuille-de-marche - Not a valid article
+2025-06-23 11:34:21 - scraper - INFO - Successfully parsed 11 valid articles from Boursenews
+2025-06-23 11:34:21 - scraper - INFO - Collecting news from FLM...
+2025-06-23 11:34:22 - scraper - INFO - Found 98 potential articles on FLM
+2025-06-23 11:34:22 - scraper - INFO - Found 20 potential articles from FLM
+2025-06-23 11:34:30 - scraper - WARNING - Skipping https://flm.ma/news.php?id=54795 - Not a valid article
+2025-06-23 11:34:55 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12505 - Not a valid article
+2025-06-23 11:34:58 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12501 - Not a valid article
+2025-06-23 11:35:08 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12494 - Not a valid article
+2025-06-23 11:35:18 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12485 - Not a valid article
+2025-06-23 11:35:21 - scraper - INFO - Successfully parsed 15 valid articles from FLM
+2025-06-23 11:35:21 - scraper - INFO - Collecting news from Le Desk...
+2025-06-23 11:35:21 - scraper - INFO - Found 1 potential articles from Le Desk
+2025-06-23 11:35:24 - scraper - INFO - Successfully parsed 1 valid articles from Le Desk
+2025-06-23 11:35:24 - scraper - INFO - Collecting news from H24Info...
+2025-06-23 11:35:25 - scraper - INFO - Found 15 potential articles from H24Info
+2025-06-23 11:36:20 - scraper - WARNING - Skipping http://h24info.ma/economie/?PageSpeed=noscript - Not a valid article
+2025-06-23 11:36:38 - scraper - INFO - Successfully parsed 14 valid articles from H24Info
+2025-06-23 11:36:38 - scraper - INFO - Collecting news from Le Matin...
+2025-06-23 11:36:38 - scraper - INFO - Found 20 potential articles from Le Matin
+2025-06-23 11:36:51 - scraper - WARNING - Skipping https://lematin.ma/economie/le-maroc-bien-positionne-pour-capter-les-financements-de-la-bid/286723 - Not a valid article
+2025-06-23 11:36:55 - scraper - WARNING - Skipping https://lematin.ma/economie/vicenne-vise-700-millions-de-dirhams-de-projets-apres-son-ipo-en-bourse/286506 - Not a valid article
+2025-06-23 11:37:21 - scraper - WARNING - Skipping https://lematin.ma/economie/lancement-officiel-du-women-entrepreneurs-finance-code-au-maroc/286515 - Not a valid article
+2025-06-23 11:37:25 - scraper - WARNING - Skipping https://lematin.ma/economie/ryad-mezzour-financera-les-projets-des-chambres-dindustrie-et-de-commerce/286893 - Not a valid article
+2025-06-23 11:37:37 - scraper - INFO - Successfully parsed 16 valid articles from Le Matin
+2025-06-23 11:37:37 - scraper - INFO - Collecting news from Medias24...
+2025-06-23 11:37:38 - scraper - INFO - Found 14 potential articles from Medias24
+2025-06-23 11:37:43 - scraper - WARNING - Skipping https://medias24.com/2025/06/19/vicenne-visa-ammc-introduction-en-bourse/ - Not a valid article
+2025-06-23 11:37:59 - scraper - WARNING - Skipping https://medias24.com/categorie/economie/ - Not a valid article
+2025-06-23 11:38:04 - scraper - WARNING - Skipping https://medias24.com/2025/06/18/ventes-de-ciment-en-forte-reprise-grands-chantiers-sportifs-le-secteur-de-la-construction-retrouve-un-cycle-porteur-en-bourse/ - Not a valid article
+2025-06-23 11:38:12 - scraper - INFO - Successfully parsed 11 valid articles from Medias24
+2025-06-23 11:38:12 - scraper - INFO - Collecting news from Finance News - Financial...
+2025-06-23 11:38:13 - scraper - INFO - Found 10 potential articles from Finance News - Financial
+2025-06-23 11:38:18 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/bourse-casablanca-2025 - Not a valid article
+2025-06-23 11:38:22 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/saham-bank-societe-generale - Not a valid article
+2025-06-23 11:38:28 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/mnes-cotees-bourse-casablanca - Not a valid article
+2025-06-23 11:38:45 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/zoom-vicenne-bourse-de-casablanca - Not a valid article
+2025-06-23 11:39:05 - scraper - INFO - Successfully parsed 6 valid articles from Finance News - Financial
+2025-06-23 11:39:05 - scraper - INFO - Collecting news from Finance News - Economic...
+2025-06-23 11:39:06 - scraper - INFO - Found 10 potential articles from Finance News - Economic
+2025-06-23 11:39:37 - scraper - ERROR - Error parsing article https://fnh.ma/article/actualite-economique/hebergements-touristiques-classement-maroc: Article `download()` failed with HTTPSConnectionPool(host='fnh.ma', port=443): Read timed out. (read timeout=20) on URL https://fnh.ma/article/actualite-economique/hebergements-touristiques-classement-maroc
+2025-06-23 11:40:04 - scraper - INFO - Successfully parsed 9 valid articles from Finance News - Economic
+2025-06-23 11:40:04 - scraper - INFO - Created new file with 83 articles at /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/data/raw/moroccan_financial_news.csv
