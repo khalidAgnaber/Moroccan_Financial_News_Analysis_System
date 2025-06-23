@@ -1,0 +1,150 @@
+2025-06-20 14:53:54 - scraper - INFO - Collecting news from Boursenews...
+2025-06-20 14:54:04 - scraper - INFO - Found 20 potential articles from Boursenews
+2025-06-20 14:54:11 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/2 - Not a valid article
+2025-06-20 14:54:17 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/bourses-europe-tensions-moyen-orient - Not a valid article
+2025-06-20 14:56:35 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/5 - Not a valid article
+2025-06-20 14:56:58 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/portefeuille-boursenews-investisseur - Not a valid article
+2025-06-20 14:57:01 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/3 - Not a valid article
+2025-06-20 14:57:11 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/feuille-de-marche - Not a valid article
+2025-06-20 14:57:11 - scraper - INFO - Successfully parsed 14 valid articles from Boursenews
+2025-06-20 14:57:11 - scraper - INFO - Collecting news from FLM...
+2025-06-20 14:57:12 - scraper - INFO - Found 98 potential articles on FLM
+2025-06-20 14:57:12 - scraper - INFO - Found 20 potential articles from FLM
+2025-06-20 14:57:25 - scraper - WARNING - Skipping https://flm.ma/news.php?id=54779 - Not a valid article
+2025-06-20 14:57:52 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12494 - Not a valid article
+2025-06-20 14:58:08 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12477 - Not a valid article
+2025-06-20 14:58:11 - scraper - INFO - Successfully parsed 17 valid articles from FLM
+2025-06-20 14:58:11 - scraper - INFO - Collecting news from Le Desk...
+2025-06-20 14:58:11 - scraper - INFO - Found 7 potential articles from Le Desk
+2025-06-20 14:58:17 - scraper - WARNING - Skipping https://ledesk.ma/2025/06/19/vicenne-obtient-le-visa-de-lammc-pour-son-introduction-en-bourse/ - Not a valid article
+2025-06-20 14:58:26 - scraper - INFO - Successfully parsed 6 valid articles from Le Desk
+2025-06-20 14:58:26 - scraper - INFO - Collecting news from H24Info...
+2025-06-20 14:58:27 - scraper - INFO - Found 16 potential articles from H24Info
+2025-06-20 14:58:37 - scraper - WARNING - Skipping https://h24info.ma/economie/we-finance-code-bam-la-berd-et-ifc-unis-pour-lentrepreneuriat-feminin-au-maroc/ - Not a valid article
+2025-06-20 14:58:48 - scraper - WARNING - Skipping http://h24info.ma/economie/?PageSpeed=noscript - Not a valid article
+2025-06-20 14:59:36 - scraper - INFO - Successfully parsed 14 valid articles from H24Info
+2025-06-20 14:59:36 - scraper - INFO - Collecting news from Le Matin...
+2025-06-20 14:59:37 - scraper - INFO - Found 20 potential articles from Le Matin
+2025-06-20 14:59:42 - scraper - WARNING - Skipping https://lematin.ma/economie/vicenne-vise-700-millions-de-dirhams-de-projets-apres-son-ipo-en-bourse/286506 - Not a valid article
+2025-06-20 15:00:00 - scraper - WARNING - Skipping https://lematin.ma/economie/lancement-officiel-du-women-entrepreneurs-finance-code-au-maroc/286515 - Not a valid article
+2025-06-20 15:00:07 - scraper - WARNING - Skipping https://lematin.ma/economie/pluies-hors-saison-les-cereales-et-dautres-cultures-a-rude-epreuve/286268 - Not a valid article
+2025-06-20 15:00:13 - scraper - WARNING - Skipping https://lematin.ma/economie/vicenne-prepare-son-entree-a-la-bourse-de-casablanca/286317 - Not a valid article
+2025-06-20 15:00:28 - scraper - INFO - Successfully parsed 16 valid articles from Le Matin
+2025-06-20 15:00:28 - scraper - INFO - Collecting news from Medias24...
+2025-06-20 15:00:29 - scraper - INFO - Found 12 potential articles from Medias24
+2025-06-20 15:00:40 - scraper - WARNING - Skipping https://medias24.com/2025/06/18/ventes-de-ciment-en-forte-reprise-grands-chantiers-sportifs-le-secteur-de-la-construction-retrouve-un-cycle-porteur-en-bourse/ - Not a valid article
+2025-06-20 15:00:56 - scraper - WARNING - Skipping https://medias24.com/categorie/economie/ - Not a valid article
+2025-06-20 15:00:58 - scraper - WARNING - Skipping https://medias24.com/2025/06/19/vicenne-visa-ammc-introduction-en-bourse/ - Not a valid article
+2025-06-20 15:01:00 - scraper - INFO - Successfully parsed 9 valid articles from Medias24
+2025-06-20 15:01:00 - scraper - INFO - Collecting news from Finance News - Financial...
+2025-06-20 15:01:02 - scraper - INFO - Found 10 potential articles from Finance News - Financial
+2025-06-20 15:01:12 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/zoom-vicenne-bourse-de-casablanca - Not a valid article
+2025-06-20 15:01:23 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/bourse-casablanca-2025 - Not a valid article
+2025-06-20 15:02:02 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/saham-bank-societe-generale - Not a valid article
+2025-06-20 15:02:02 - scraper - INFO - Successfully parsed 7 valid articles from Finance News - Financial
+2025-06-20 15:02:02 - scraper - INFO - Collecting news from Finance News - Economic...
+2025-06-20 15:02:04 - scraper - INFO - Found 10 potential articles from Finance News - Economic
+2025-06-20 15:03:10 - scraper - ERROR - Error parsing article https://fnh.ma/article/actualite-economique/reforme-prix-medicaments-maroc-interview-belaiche: Article `download()` failed with HTTPSConnectionPool(host='fnh.ma', port=443): Read timed out. (read timeout=20) on URL https://fnh.ma/article/actualite-economique/reforme-prix-medicaments-maroc-interview-belaiche
+2025-06-20 15:03:27 - scraper - INFO - Successfully parsed 9 valid articles from Finance News - Economic
+2025-06-20 15:03:27 - scraper - INFO - Added 50 new articles to /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/try4_cl/data/raw/moroccan_financial_news.csv
+2025-06-20 16:00:02 - scraper - INFO - Collecting news from Boursenews...
+2025-06-20 16:00:05 - scraper - INFO - Found 20 potential articles from Boursenews
+2025-06-20 16:00:09 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/5 - Not a valid article
+2025-06-20 16:00:24 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/bourses-europe-tensions-moyen-orient - Not a valid article
+2025-06-20 16:00:37 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/Protection-sociale-au-Maroc-nouveau-soutien-de-250-M%24-de-la-Banque-mondiale - Not a valid article
+2025-06-20 16:00:41 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/4 - Not a valid article
+2025-06-20 16:00:45 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/les-bourses-europeens-rebondissent-vendredi - Not a valid article
+2025-06-20 16:01:09 - scraper - ERROR - Error parsing article https://boursenews.ma/article/marches/sentiment-marche-boursenews: Article `download()` failed with HTTPSConnectionPool(host='boursenews.ma', port=443): Read timed out. (read timeout=20) on URL https://boursenews.ma/article/marches/sentiment-marche-boursenews
+2025-06-20 16:01:20 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/portefeuille-boursenews-investisseur - Not a valid article
+2025-06-20 16:01:39 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/2 - Not a valid article
+2025-06-20 16:01:48 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/feuille-de-marche - Not a valid article
+2025-06-20 16:01:48 - scraper - INFO - Successfully parsed 11 valid articles from Boursenews
+2025-06-20 16:01:48 - scraper - INFO - Collecting news from FLM...
+2025-06-20 16:01:49 - scraper - INFO - Found 98 potential articles on FLM
+2025-06-20 16:01:49 - scraper - INFO - Found 20 potential articles from FLM
+2025-06-20 16:02:01 - scraper - WARNING - Skipping https://flm.ma/news.php?id=54779 - Not a valid article
+2025-06-20 16:02:31 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12494 - Not a valid article
+2025-06-20 16:02:52 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12477 - Not a valid article
+2025-06-20 16:02:55 - scraper - INFO - Successfully parsed 17 valid articles from FLM
+2025-06-20 16:02:55 - scraper - INFO - Collecting news from Le Desk...
+2025-06-20 16:02:55 - scraper - INFO - Found 7 potential articles from Le Desk
+2025-06-20 16:03:10 - scraper - WARNING - Skipping https://ledesk.ma/2025/06/19/vicenne-obtient-le-visa-de-lammc-pour-son-introduction-en-bourse/ - Not a valid article
+2025-06-20 16:03:14 - scraper - INFO - Successfully parsed 6 valid articles from Le Desk
+2025-06-20 16:03:14 - scraper - INFO - Collecting news from H24Info...
+2025-06-20 16:03:15 - scraper - INFO - Found 15 potential articles from H24Info
+2025-06-20 16:03:33 - scraper - WARNING - Skipping http://h24info.ma/economie/?PageSpeed=noscript - Not a valid article
+2025-06-20 16:03:52 - scraper - WARNING - Skipping https://h24info.ma/economie/we-finance-code-bam-la-berd-et-ifc-unis-pour-lentrepreneuriat-feminin-au-maroc/ - Not a valid article
+2025-06-20 16:03:52 - scraper - INFO - Successfully parsed 13 valid articles from H24Info
+2025-06-20 16:03:52 - scraper - INFO - Collecting news from Le Matin...
+2025-06-20 16:03:52 - scraper - INFO - Found 20 potential articles from Le Matin
+2025-06-20 16:03:57 - scraper - WARNING - Skipping https://lematin.ma/economie/vicenne-vise-700-millions-de-dirhams-de-projets-apres-son-ipo-en-bourse/286506 - Not a valid article
+2025-06-20 16:04:31 - scraper - WARNING - Skipping https://lematin.ma/economie/le-maroc-bien-positionne-pour-capter-les-financements-de-la-bid/286723 - Not a valid article
+2025-06-20 16:04:44 - scraper - WARNING - Skipping https://lematin.ma/economie/lancement-officiel-du-women-entrepreneurs-finance-code-au-maroc/286515 - Not a valid article
+2025-06-20 16:04:47 - scraper - INFO - Successfully parsed 17 valid articles from Le Matin
+2025-06-20 16:04:47 - scraper - INFO - Collecting news from Medias24...
+2025-06-20 16:04:47 - scraper - INFO - Found 12 potential articles from Medias24
+2025-06-20 16:04:55 - scraper - WARNING - Skipping https://medias24.com/2025/06/18/ventes-de-ciment-en-forte-reprise-grands-chantiers-sportifs-le-secteur-de-la-construction-retrouve-un-cycle-porteur-en-bourse/ - Not a valid article
+2025-06-20 16:05:05 - scraper - WARNING - Skipping https://medias24.com/categorie/economie/ - Not a valid article
+2025-06-20 16:05:12 - scraper - WARNING - Skipping https://medias24.com/2025/06/19/vicenne-visa-ammc-introduction-en-bourse/ - Not a valid article
+2025-06-20 16:05:21 - scraper - INFO - Successfully parsed 9 valid articles from Medias24
+2025-06-20 16:05:21 - scraper - INFO - Collecting news from Finance News - Financial...
+2025-06-20 16:05:31 - scraper - INFO - Found 10 potential articles from Finance News - Financial
+2025-06-20 16:05:36 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/saham-bank-societe-generale - Not a valid article
+2025-06-20 16:06:13 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/bourse-casablanca-2025 - Not a valid article
+2025-06-20 16:06:34 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/zoom-vicenne-bourse-de-casablanca - Not a valid article
+2025-06-20 16:06:38 - scraper - INFO - Successfully parsed 7 valid articles from Finance News - Financial
+2025-06-20 16:06:38 - scraper - INFO - Collecting news from Finance News - Economic...
+2025-06-20 16:06:39 - scraper - INFO - Found 10 potential articles from Finance News - Economic
+2025-06-20 16:07:52 - scraper - INFO - Successfully parsed 10 valid articles from Finance News - Economic
+2025-06-20 16:07:52 - scraper - INFO - Added 6 new articles to /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/try4_cl/data/raw/moroccan_financial_news.csv
+2025-06-20 20:03:07 - scraper - INFO - Collecting news from Boursenews...
+2025-06-20 20:03:08 - scraper - INFO - Found 20 potential articles from Boursenews
+2025-06-20 20:03:25 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/4 - Not a valid article
+2025-06-20 20:03:45 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/feuille-de-marche - Not a valid article
+2025-06-20 20:03:48 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/2 - Not a valid article
+2025-06-20 20:03:52 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/Protection-sociale-au-Maroc-nouveau-soutien-de-250-M%24-de-la-Banque-mondiale - Not a valid article
+2025-06-20 20:04:18 - scraper - ERROR - Error parsing article https://boursenews.ma/article/actualite/Le-Roadshow-Regional-annuel-de-TAMWILCOM-poursuit-sa-tournee-a-Laayoune: Article `download()` failed with HTTPSConnectionPool(host='boursenews.ma', port=443): Read timed out. (read timeout=20) on URL https://boursenews.ma/article/actualite/Le-Roadshow-Regional-annuel-de-TAMWILCOM-poursuit-sa-tournee-a-Laayoune
+2025-06-20 20:04:22 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/3 - Not a valid article
+2025-06-20 20:04:26 - scraper - WARNING - Skipping https://boursenews.ma/articles/marches/5 - Not a valid article
+2025-06-20 20:04:28 - scraper - WARNING - Skipping https://boursenews.ma/article/marches/portefeuille-boursenews-investisseur - Not a valid article
+2025-06-20 20:04:46 - scraper - WARNING - Skipping https://boursenews.ma/article/actualite/bourses-europe-tensions-moyen-orient - Not a valid article
+2025-06-20 20:04:53 - scraper - INFO - Successfully parsed 11 valid articles from Boursenews
+2025-06-20 20:04:53 - scraper - INFO - Collecting news from FLM...
+2025-06-20 20:04:54 - scraper - INFO - Found 98 potential articles on FLM
+2025-06-20 20:04:54 - scraper - INFO - Found 20 potential articles from FLM
+2025-06-20 20:05:10 - scraper - WARNING - Skipping https://flm.ma/news.php?id=54779 - Not a valid article
+2025-06-20 20:05:33 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12494 - Not a valid article
+2025-06-20 20:05:52 - scraper - WARNING - Skipping https://flm.ma/article.php?id=12477 - Not a valid article
+2025-06-20 20:05:55 - scraper - INFO - Successfully parsed 17 valid articles from FLM
+2025-06-20 20:05:55 - scraper - INFO - Collecting news from Le Desk...
+2025-06-20 20:05:56 - scraper - INFO - Found 7 potential articles from Le Desk
+2025-06-20 20:06:07 - scraper - WARNING - Skipping https://ledesk.ma/2025/06/19/vicenne-obtient-le-visa-de-lammc-pour-son-introduction-en-bourse/ - Not a valid article
+2025-06-20 20:06:10 - scraper - INFO - Successfully parsed 6 valid articles from Le Desk
+2025-06-20 20:06:10 - scraper - INFO - Collecting news from H24Info...
+2025-06-20 20:06:11 - scraper - INFO - Found 14 potential articles from H24Info
+2025-06-20 20:06:34 - scraper - WARNING - Skipping https://h24info.ma/economie/we-finance-code-bam-la-berd-et-ifc-unis-pour-lentrepreneuriat-feminin-au-maroc/ - Not a valid article
+2025-06-20 20:06:53 - scraper - WARNING - Skipping http://h24info.ma/economie/?PageSpeed=noscript - Not a valid article
+2025-06-20 20:07:13 - scraper - INFO - Successfully parsed 12 valid articles from H24Info
+2025-06-20 20:07:13 - scraper - INFO - Collecting news from Le Matin...
+2025-06-20 20:07:14 - scraper - INFO - Found 20 potential articles from Le Matin
+2025-06-20 20:07:17 - scraper - WARNING - Skipping https://lematin.ma/economie/lancement-officiel-du-women-entrepreneurs-finance-code-au-maroc/286515 - Not a valid article
+2025-06-20 20:07:20 - scraper - WARNING - Skipping https://lematin.ma/economie/le-maroc-bien-positionne-pour-capter-les-financements-de-la-bid/286723 - Not a valid article
+2025-06-20 20:08:08 - scraper - WARNING - Skipping https://lematin.ma/economie/vicenne-vise-700-millions-de-dirhams-de-projets-apres-son-ipo-en-bourse/286506 - Not a valid article
+2025-06-20 20:08:12 - scraper - INFO - Successfully parsed 17 valid articles from Le Matin
+2025-06-20 20:08:12 - scraper - INFO - Collecting news from Medias24...
+2025-06-20 20:08:12 - scraper - INFO - Found 12 potential articles from Medias24
+2025-06-20 20:08:22 - scraper - WARNING - Skipping https://medias24.com/2025/06/19/vicenne-visa-ammc-introduction-en-bourse/ - Not a valid article
+2025-06-20 20:08:32 - scraper - WARNING - Skipping https://medias24.com/2025/06/18/ventes-de-ciment-en-forte-reprise-grands-chantiers-sportifs-le-secteur-de-la-construction-retrouve-un-cycle-porteur-en-bourse/ - Not a valid article
+2025-06-20 20:08:34 - scraper - WARNING - Skipping https://medias24.com/categorie/economie/ - Not a valid article
+2025-06-20 20:08:38 - scraper - INFO - Successfully parsed 9 valid articles from Medias24
+2025-06-20 20:08:38 - scraper - INFO - Collecting news from Finance News - Financial...
+2025-06-20 20:08:40 - scraper - INFO - Found 10 potential articles from Finance News - Financial
+2025-06-20 20:08:50 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/saham-bank-societe-generale - Not a valid article
+2025-06-20 20:08:55 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/zoom-vicenne-bourse-de-casablanca - Not a valid article
+2025-06-20 20:09:24 - scraper - WARNING - Skipping https://fnh.ma/article/actualite-financiere-maroc/bourse-casablanca-2025 - Not a valid article
+2025-06-20 20:09:45 - scraper - INFO - Successfully parsed 7 valid articles from Finance News - Financial
+2025-06-20 20:09:45 - scraper - INFO - Collecting news from Finance News - Economic...
+2025-06-20 20:09:45 - scraper - INFO - Found 10 potential articles from Finance News - Economic
+2025-06-20 20:10:56 - scraper - ERROR - Error parsing article https://fnh.ma/article/actualite-economique/reforme-prix-medicaments-maroc-interview-belaiche: Article `download()` failed with HTTPSConnectionPool(host='fnh.ma', port=443): Read timed out. (read timeout=20) on URL https://fnh.ma/article/actualite-economique/reforme-prix-medicaments-maroc-interview-belaiche
+2025-06-20 20:11:01 - scraper - INFO - Successfully parsed 9 valid articles from Finance News - Economic
+2025-06-20 20:11:01 - scraper - INFO - Added 6 new articles to /Users/mac/Desktop/Moroccan_Financial_News_Analysis_System/try4_cl/data/raw/moroccan_financial_news.csv

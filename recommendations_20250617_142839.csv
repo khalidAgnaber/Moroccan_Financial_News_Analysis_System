@@ -1,0 +1,11 @@
+company,ticker,recommendation,confidence,sentiment_score,trend,news_count,latest_news_date,explanation
+Taqa Morocco,TQM,SELL,1.0,0.0,0.0,3,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Maroc Telecom,IAM,SELL,1.0,-1.0,0.0,1,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Cosumar,CSR,SELL,1.0,-1.0,0.0,1,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Bank of Africa,BOA,SELL,1.0,-1.0,0.0,3,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Sonasid,SID,SELL,1.0,-0.5,0.0,2,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Label Vie,LBV,SELL,1.0,-1.0,0.0,1,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Marsa Maroc,MRS,SELL,1.0,-1.0,0.0,1,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Lafarge Holcim Maroc,LHM,SELL,1.0,-1.0,0.0,1,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Attijariwafa Bank,ATW,SELL,1.0,-1.0,0.0,2,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
+Managem,MNG,SELL,1.0,-1.0,0.0,2,2025-06-17,Negative sentiment in recent news coverage indicates unfavorable outlook.
