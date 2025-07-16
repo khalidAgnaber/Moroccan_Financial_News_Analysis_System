@@ -19,8 +19,8 @@ from data_collection.data_storage import (
     load_latest_raw_data, merge_raw_data_files, save_processed_data,
     daily_data_maintenance
 )
-from data_preprocessing.cleaner import clean_dataframe
-from data_preprocessing.preprocessor import TextPreprocessor, preprocess_for_training
+from data_preprocessing.text_cleaner import clean_dataframe
+from data_preprocessing.text_preprocessor import TextPreprocessor, preprocess_for_training
 from models.lstm_model import LSTMSentimentModel, SimpleLSTMModel
 from models.bert_model import BERTSentimentModel
 from models.transformer_model import TransformerSentimentModel

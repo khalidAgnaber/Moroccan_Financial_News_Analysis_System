@@ -3,10 +3,28 @@ __pycache__/
 *.py[cod]
 
 # Ignore virtual environments
-t4_venv/
+venv/
 
 # Ignore Jupyter checkpoints (if any)
 .ipynb_checkpoints/
 
 # Ignore VSCode config (optional)
 .vscode/
+
+node_modules/
+build/
+dist/
+.DS_Store
+*.log
+
+cc.fr.300.bin
+cc.fr.300.bin.gz
+
+models/saved/
+models/*.bin
+*.csv
+*.json
+*.pkl
+*.h5
+*.bin
+*.npy

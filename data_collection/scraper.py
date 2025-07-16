@@ -622,7 +622,7 @@ class FinancialNewsScraper:
         }
         # Configure newspaper settings
         self.config = Config()
-        self.config.request_timeout = 20  # Increased timeout
+        self.config.request_timeout = 20  # timeout
         self.config.browser_user_agent = self.headers["User-Agent"]
         self.config.number_threads = 1  # Lower thread count to avoid overwhelming sites
         self.start_time = time.time()
