@@ -90,7 +90,7 @@ class BERTSentimentModel:
             'attention_mask': attention_mask
         }
     
-    def train(self, X_train, y_train, X_val, y_val, epochs=3, batch_size=8):
+    def train(self, X_train, y_train, X_val, y_val, epochs=13, batch_size=32):
         """Train the model with early stopping."""
         if self.model is None:
             self.build_model()

@@ -22,7 +22,7 @@ cc.fr.300.bin.gz
 
 models/saved/
 models/*.bin
-*.csv
+
 *.json
 *.pkl
 *.h5
