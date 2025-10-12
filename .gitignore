@@ -30,3 +30,18 @@ models/*.bin
 *.npy
 
 models/optimized_bert_sentiment_model/best_model/variables/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.log
+.env
+.DS_Store
+.ipynb_checkpoints/
+*.sqlite3
+*.db
+*.h5
+*.model
+*.pt
+*.pth
