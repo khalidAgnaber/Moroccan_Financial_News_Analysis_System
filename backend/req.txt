@@ -1,0 +1,15 @@
+Flask
+flask-cors
+apscheduler
+pandas
+transformers
+tensorflow-macos
+tensorflow-metal
+beautifulsoup4
+requests
+newspaper3k
+
+lxml[html_clean]
+spacy
+fasttext
+gensim

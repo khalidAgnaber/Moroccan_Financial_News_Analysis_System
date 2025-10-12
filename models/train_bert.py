@@ -22,16 +22,16 @@ warnings.filterwarnings('ignore')
 
 # ========== OPTIMIZED CONFIG ==========
 MODEL_NAME = "camembert-base"
-MAX_LENGTH = 384  # Increased for better context
-EPOCHS = 20  # More epochs with better early stopping
-BATCH_SIZE = 4   # Smaller batch for better gradients with limited data
-LEARNING_RATE = 3e-5  # Much higher learning rate
-WARMUP_EPOCHS = 2  # Proper warmup
-PATIENCE = 7  # More patience for small dataset
-DROPOUT_RATE = 0.1  # Lower dropout for small dataset
-MIN_TEXT_LENGTH = 30  # Longer minimum text
-AUGMENTATION_FACTOR = 2.0  # More aggressive augmentation
-PROCESSED_DATA_FILE = "data/processed/processed_financial_news_labeled_corrected.csv"
+MAX_LENGTH = 384  
+EPOCHS = 10  
+BATCH_SIZE = 4  
+LEARNING_RATE = 3e-5 
+WARMUP_EPOCHS = 2
+PATIENCE = 7  
+DROPOUT_RATE = 0.1 
+MIN_TEXT_LENGTH = 30  
+AUGMENTATION_FACTOR = 2.0 
+PROCESSED_DATA_FILE = "data/processed/labeled_news_multi.csv"
 MODEL_DIR = "models/optimized_bert_sentiment_model"
 PLOT_PATH = os.path.join(MODEL_DIR, "training_history.png")
 LABEL_MAP_PATH = os.path.join(MODEL_DIR, "label_mapping.txt")
